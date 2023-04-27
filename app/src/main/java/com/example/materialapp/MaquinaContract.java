@@ -10,6 +10,7 @@ public class MaquinaContract {
         public static final String NOMBRE = "name";
         public static final String DESCRIP = "descrip";
         public static final String CLIENTE = "cliente";
+        public static final String MESES = "meses";
 
     }
 
