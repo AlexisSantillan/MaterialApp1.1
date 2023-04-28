@@ -22,7 +22,7 @@
         android:textSize="30dp"
         android:textStyle="bold"
         android:gravity="center"
-        android:text="REGISTRO MATERIALES" />
+        android:text="REGISTRO  MATERIALES" />
 
     <TextView
         android:id="@+id/tv_nom_mat_reg"
