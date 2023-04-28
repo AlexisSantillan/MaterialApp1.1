@@ -24,6 +24,7 @@ public class MaquinaDbHelper extends SQLiteOpenHelper {
                 + MaquinaContract.MaquinaEntry.CLIENTE + " TEXT NOT NULL,"
                 + "UNIQUE (" + MaquinaContract.MaquinaEntry.ID_MAQUINA + "))");
 
+
         //MatDatabase.execSQL("");
 
 //        ContentValues values = new ContentValues();

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--en la siguiente linea se indica que quieto hacer un rectangulo-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!--indica el margen, color y grosor-->
+    <stroke
+        android:width="3dp"
+        android:color="@color/gray2"/>
+    <!--redundea los margenes-->
+    <corners
+        android:radius="40dp"/>
+</shape>
