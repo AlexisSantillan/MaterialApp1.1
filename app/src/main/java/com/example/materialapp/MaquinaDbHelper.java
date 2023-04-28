@@ -18,8 +18,7 @@ public class MaquinaDbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + MaquinaContract.MaquinaEntry.TABLE_NAME + " ("
-                + MaquinaContract.MaquinaEntry._ID + " integer primary key autoincrement,"
-                + MaquinaContract.MaquinaEntry.ID_MAQUINA + " text not null,"
+                + MaquinaContract.MaquinaEntry.ID_MAQUINA + " integer primary key autoincrement,"
                 + MaquinaContract.MaquinaEntry.NOMBRE + " text not null,"
                 + MaquinaContract.MaquinaEntry.DESCRIP + " text not null,"
                 + MaquinaContract.MaquinaEntry.CLIENTE + " text not null,"
@@ -30,26 +29,6 @@ public class MaquinaDbHelper extends SQLiteOpenHelper {
     }
 
     private void mockData(SQLiteDatabase db) {
-        mockMaquina(db, new Maquina(" A-2", "Retroexcavadora",
-                "año: 1999", "Alexis Cruz",
-                "marzo-mayo"));
-        mockMaquina(db, new Maquina("A-3", "Aplanadora",
-                "año: 2003", "Daniel Samper",
-                "junio-julio"));
-        mockMaquina(db, new Maquina("A-4", "Abogado de derechos laborales",
-                "300 200 3333", "Gran profesional con más de 3 años de experiencia en defensa de los trabajadores.",
-                "lucia_aristizabal.jpg"));
-        mockMaquina(db, new Maquina("A-5", "Abogado de familia",
-                "300 200 4444", "Gran profesional con experiencia de 5 años en casos de familia.",
-                "marina_acosta.jpg"));
-        mockMaquina(db, new Maquina("A-6", "Abogado de administración pública",
-                "300 200 5555", "Gran profesional con experiencia de 5 años en casos en expedientes de urbanismo.",
-                "olga_ortiz.jpg"));
-        mockMaquina(db, new Maquina("A-7", "Abogado fiscalista",
-                "300 200 6666", "Gran profesional con experiencia de 5 años en casos de derecho financiero",
-                "pamela_briger.jpg"));
-
-
     }
 
     public long mockMaquina(SQLiteDatabase db, Maquina maquina) {
