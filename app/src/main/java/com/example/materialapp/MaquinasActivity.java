@@ -7,7 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MaquinasActivity extends AppCompatActivity {
 
-    public static final String EXTRA_LAWYER_ID = "extra_maquina_id";
+    public static final String EXTRA_MAQUINA_ID = "extra_maquina_id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,13 +17,13 @@ public class MaquinasActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         MaquinasFragment fragment = (MaquinasFragment)
-                getSupportFragmentManager().findFragmentById(R.id.maquinas_container);
+                getSupportFragmentManager().findFragmentById(R.id.maquinas_list);
 
         if (fragment == null) {
             fragment = MaquinasFragment.newInstance();
             getSupportFragmentManager()
                     .beginTransaction()
-                    .add(R.id.maquinas_container, fragment)
+                    .add(R.id.maquinas_list, fragment)
                     .commit();
         }
     }

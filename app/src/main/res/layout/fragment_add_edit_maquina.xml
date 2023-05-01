@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="AddEditMaquinaFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            tools:text="Excavadora" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="cliente"
+            android:inputType="phone"
+            tools:text="Carlos" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_specialty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_specialty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripcion"
+            android:inputType="text"
+            tools:text="Maquina" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_bio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:hint="Meses"
+            android:imeOptions="actionDone"
+            android:inputType="text|textMultiLine"></com.google.android.material.textfield.TextInputEditText>

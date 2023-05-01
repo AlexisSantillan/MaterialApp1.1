@@ -1,5 +1,6 @@
 package com.example.materialapp;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -19,7 +20,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MaquinasFragment extends Fragment {
 
-    public static final int REQUEST_UPDATE_DELETE_LAWYER = 2;
+    public static final int REQUEST_UPDATE_DELETE_MAQUINA = 2;
 
     private MaquinaDbHelper mMaquinasDbHelper;
 
@@ -44,20 +45,21 @@ public class MaquinasFragment extends Fragment {
         mMaquinasAdapter = new MaquinasCursorAdapter(getActivity(), null);
         mAddButton = (FloatingActionButton) getActivity().findViewById(R.id.fab);
 
-        // Setup
+
         mMaquinasList.setAdapter(mMaquinasAdapter);
 
-        // Eventos
+
         mMaquinasList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Cursor currentItem = (Cursor) mMaquinasAdapter.getItem(i);
-                String currentLawyerId = currentItem.getString(
+                @SuppressLint("Range") String currentMaquinaId = currentItem.getString(
                         currentItem.getColumnIndex(MaquinaContract.MaquinaEntry.ID_MAQUINA));
 
-                showDetailScreen(currentLawyerId);
+                showDetailScreen(currentMaquinaId);
             }
         });
+
         mAddButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,10 +70,10 @@ public class MaquinasFragment extends Fragment {
 
         getActivity().deleteDatabase(MaquinaDbHelper.DATABASE_NAME);
 
-        // Instancia de helper
+
         mMaquinasDbHelper = new MaquinaDbHelper(getActivity());
 
-        // Carga de datos
+
         loadMaquinas();
 
         return root;
@@ -82,11 +84,11 @@ public class MaquinasFragment extends Fragment {
 
         if (Activity.RESULT_OK == resultCode) {
             switch (requestCode) {
-                case AddEditMaquinaActivity.REQUEST_ADD_LAWYER:
+                case AddEditMaquinaActivity.REQUEST_ADD_MAQUINA:
                     showSuccessfullSavedMessage();
                     loadMaquinas();
                     break;
-                case REQUEST_UPDATE_DELETE_LAWYER:
+                case REQUEST_UPDATE_DELETE_MAQUINA:
                     loadMaquinas();
                     break;
             }
@@ -110,7 +112,7 @@ public class MaquinasFragment extends Fragment {
     private void showDetailScreen(String maquinaId) {
         Intent intent = new Intent(getActivity(), MaquinaDetailActivity.class);
         intent.putExtra(MaquinasActivity.EXTRA_MAQUINA_ID, maquinaId);
-        startActivityForResult(intent, REQUEST_UPDATE_DELETE_LAWYER);
+        startActivityForResult(intent, REQUEST_UPDATE_DELETE_MAQUINA);
     }
 
     private class MaquinasLoadTask extends AsyncTask<Void, Void, Cursor> {

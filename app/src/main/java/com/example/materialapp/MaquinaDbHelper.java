@@ -43,7 +43,7 @@ public class MaquinaDbHelper extends SQLiteOpenHelper {
 
     }
 
-    public long saveLawyer(Maquina maquina) {
+    public long saveMaquina(Maquina maquina) {
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
         return sqLiteDatabase.insert(
@@ -65,43 +65,32 @@ public class MaquinaDbHelper extends SQLiteOpenHelper {
                         null);
     }
 
-    public Cursor getMaquinaById(String lawyerId) {
+    public Cursor getMaquinaById(String maquinaId) {
         Cursor c = getReadableDatabase().query(
                 MaquinaContract.MaquinaEntry.TABLE_NAME,
                 null,
                 MaquinaContract.MaquinaEntry.ID_MAQUINA + " LIKE ?",
-                new String[]{lawyerId},
+                new String[]{maquinaId},
                 null,
                 null,
                 null);
         return c;
     }
 
-    public int deleteLawyer(String lawyerId) {
+    public int deleteMaquina(String maquinaId) {
         return getWritableDatabase().delete(
                 MaquinaContract.MaquinaEntry.TABLE_NAME,
                 MaquinaContract.MaquinaEntry.ID_MAQUINA + " LIKE ?",
-                new String[]{lawyerId});
+                new String[]{maquinaId});
     }
 
-    public int updateLawyer(Maquina maquina, String lawyerId) {
+    public int updateMaquina(Maquina maquina, String maquinaId) {
         return getWritableDatabase().update(
                 MaquinaContract.MaquinaEntry.TABLE_NAME,
                 maquina.toContentValues(),
                 MaquinaContract.MaquinaEntry.ID_MAQUINA + " LIKE ?",
-                new String[]{lawyerId}
+                new String[]{maquinaId}
         );
     }
 
-    public ContentValues toContentValues() {
-        ContentValues values = new ContentValues();
-        values.put(MaquinaContract.MaquinaEntry.ID_MAQUINA,"id_maquina");
-        values.put(MaquinaContract.MaquinaEntry.NOMBRE, "nombre");
-        values.put(MaquinaContract.MaquinaEntry.DESCRIP, "descripcion");
-        values.put(MaquinaContract.MaquinaEntry.CLIENTE, "clienre");
-        values.put(MaquinaContract.MaquinaEntry.MESES, "meses");
-
-
-        return values;
-    }
 }
