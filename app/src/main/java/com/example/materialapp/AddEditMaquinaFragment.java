@@ -24,7 +24,7 @@ public class AddEditMaquinaFragment extends Fragment {
 
     private String mMaquinaId;
 
-    private MaquinasDbHelper mMaquinasDbHelper;
+    private MaquinaDbHelper mMaquinasDbHelper;
 
     private FloatingActionButton mSaveButton;
     private TextInputEditText mNameField;
@@ -53,7 +53,7 @@ public class AddEditMaquinaFragment extends Fragment {
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_add_edit_maquina, container, false);
 
-        // Referencias UI
+
         mSaveButton = (FloatingActionButton) getActivity().findViewById(R.id.fab);
         mNameField = (TextInputEditText) root.findViewById(R.id.et_name);
         mPhoneNumberField = (TextInputEditText) root.findViewById(R.id.et_phone_number);
@@ -72,9 +72,9 @@ public class AddEditMaquinaFragment extends Fragment {
             }
         });
 
-        mMaquinasDbHelper = new mMaquinasDbHelper(getActivity());
+        mMaquinasDbHelper = new MaquinaDbHelper(getActivity());
 
-        // Carga de datos
+
         if (mMaquinaId != null) {
             loadMaquina();
         }
