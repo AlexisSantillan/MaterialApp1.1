@@ -3,6 +3,7 @@ package com.example.materialapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabItem;
@@ -15,5 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
     }
+
 }

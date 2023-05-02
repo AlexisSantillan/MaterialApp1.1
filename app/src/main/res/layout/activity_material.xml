@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Material_act">
+    <ImageButton
+        android:id="@+id/img_senv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cos_senv" />
+
+    <TextView
+        android:id="@+id/tv_mat_senv"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:text="COSTO SIN ENVIO" />
+    <ImageButton
+        android:id="@+id/img_cenv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cos_cenv"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="300dp"/>
+
+    <TextView
+        android:id="@+id/tv_mat_scenv"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:text="COSTO CON ENVIO"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="400dp"/>
+    <TextView
+        android:id="@+id/tv_mat_scenv_text"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:text="COSTO CON ENVIO"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="400dp"/>
+
+    <TextView
+        android:id="@+id/tv_text_senv_mat"
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="200dp"
+        android:textColor="@color/black"
+        android:text="Haz clic para calcular el costo del pedido sin considerar el envío, solo considera el precio del material por metros cúbicos y la cantidad." />
+
+    <TextView
+        android:id="@+id/tv_text_cenv_mat"
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="20dp"
+        android:text="Haz clic para calcular el costo del pedido considerando el precio del material por metros cúbicos, la cantidad y el costo del envío con precisión."
+        android:textColor="@color/black" />
+    <Button
+        android:id="@+id/bt_costo_mat_mat"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="670dp"
+        android:backgroundTint="@color/yellow"
+        android:text="COSTO MATERIALES"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+
+</RelativeLayout>

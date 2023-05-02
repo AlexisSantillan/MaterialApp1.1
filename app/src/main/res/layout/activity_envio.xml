@@ -1,42 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".RegistrarMaterial">
-    <ImageView
-        android:id="@+id/img_reg"
+    tools:context=".Envio">
+
+    <ImageButton
+        android:id="@+id/img_cenv_envio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/reg_mat" />
+        android:src="@drawable/cos_cenv" />
 
     <TextView
-        android:id="@+id/tv_mat_reg"
+        android:id="@+id/tv_cenv_envio"
         android:layout_width="400dp"
         android:layout_height="50dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
         android:textColor="@android:color/white"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:gravity="center"
-        android:text="REGISTRO  MATERIALES" />
-
+        android:text="COSTO CON ENVIO" />
     <TextView
-        android:id="@+id/tv_nom_mat_reg"
+        android:id="@+id/tv_costo_km_cenv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="200dp"
-        android:text="Nombre del material"
+        android:text="Costo por kilometro"
         android:textColor="@color/black"
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/ed_nom_mat_reg"
+        android:id="@+id/ed_costo_km_cenv"
         android:layout_width="370dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
@@ -44,93 +42,89 @@
         android:ems="10"
         android:textSize="18dp"
         android:gravity="center"
-        android:hint="Ingrese el nombre del material"
+        android:hint="Ingrese el costo por kilometro"
         android:background="@drawable/format_field"
         android:inputType="number" />
+
     <TextView
-        android:id="@+id/tv_cos_mat_reg"
+        android:id="@+id/tv_cant_km_cenv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="320dp"
+        android:text="Kilometros a recorrer"
         android:textColor="@color/black"
-        android:textSize="20dp"
-        android:text="Costo del material"/>
+        android:textSize="20dp" />
+
     <EditText
-        android:id="@+id/ed_cos_mat_reg"
+        android:id="@+id/ed_cant_km_cenv"
         android:layout_width="370dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="370dp"
         android:ems="10"
         android:textSize="18dp"
         android:gravity="center"
-        android:hint="Ingrese el nombre del material"
+        android:hint="Ingrese los kilometros a recorrer"
         android:background="@drawable/format_field"
         android:inputType="number"
         android:maxLength="6"/>
-
-
-
-    <Button
-        android:id="@+id/bt_registrar_mat_reg"
-        android:layout_width="370dp"
+    <TextView
+        android:id="@+id/tv_cost_mat_cenv"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="450dp"
-        android:backgroundTint="@color/yellow"
-        android:text="REGISTRAR"
+        android:layout_marginTop="460dp"
+        android:text="Costo material: "
         android:textColor="@color/black"
-        android:textSize="15dp"
-        app:cornerRadius="20dp" />
-    <Button
-        android:id="@+id/bt_mostrar_mat_reg"
-        android:layout_width="370dp"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/tv_cost_env_cenv"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="500dp"
-        android:backgroundTint="@color/yellow"
-        android:text="MOSTRAR"
-        android:gravity="center"
+        android:text="Costo envio: "
         android:textColor="@color/black"
-        android:textSize="15dp"
-        app:cornerRadius="20dp" />
-    <Button
-        android:id="@+id/bt_modificar_mat_reg"
-        android:layout_width="370dp"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/tv_total_cenv"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="550dp"
-        android:gravity="center"
-        android:backgroundTint="@color/yellow"
-        android:text="MODIFICAR"
+        android:layout_marginTop="540dp"
+        android:text="Costo total: "
         android:textColor="@color/black"
-        android:textSize="15dp"
-        app:cornerRadius="20dp" />
+        android:textSize="20dp" />
     <Button
-        android:id="@+id/bt_eliminar_mat_reg"
-        android:layout_width="370dp"
+        android:id="@+id/bt_calcular_total_cenv"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="600dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="@color/yellow"
-        android:text="ELIMINAR"
         android:textColor="@color/black"
-        android:textSize="15dp"
-        app:cornerRadius="20dp" />
+        android:text="CALCULAR COSTO TOTAL" />
     <Button
-        android:id="@+id/bt_regresar_mat_reg"
+        android:id="@+id/datos_cliente_cenv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:layout_marginStart="240dp"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/black"
+        android:text="DATOS DEL CLIENTE" />
+    <Button
+        android:id="@+id/bt_regresar_env"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="670dp"
+        android:layout_marginTop="650dp"
         android:drawableLeft="@drawable/ic_baseline_arrow_circle_left_24"
         android:text="REGRESAR"
         android:textColor="@color/white"
         android:textSize="15dp"
         android:backgroundTint="@color/black" />
-
-
 
 
 </RelativeLayout>

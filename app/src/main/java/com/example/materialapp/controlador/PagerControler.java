@@ -33,3 +33,5 @@ public class PagerControler extends FragmentPagerAdapter {
         return numoftabs;
     }
 }
+
+

@@ -15,8 +15,8 @@ public class MaquinaDbHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + MaquinaContract.MaquinaEntry.TABLE_NAME + " ("
+    public void onCreate(SQLiteDatabase MatDatabase) {
+        MatDatabase.execSQL("CREATE TABLE " + MaquinaContract.MaquinaEntry.TABLE_NAME + " ("
                 + MaquinaContract.MaquinaEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + MaquinaContract.MaquinaEntry.ID_MAQUINA + " TEXT NOT NULL,"
                 + MaquinaContract.MaquinaEntry.NOMBRE + " TEXT NOT NULL,"
@@ -24,13 +24,17 @@ public class MaquinaDbHelper extends SQLiteOpenHelper {
                 + MaquinaContract.MaquinaEntry.CLIENTE + " TEXT NOT NULL,"
                 + "UNIQUE (" + MaquinaContract.MaquinaEntry.ID_MAQUINA + "))");
 
-        ContentValues values = new ContentValues();
-        values.put(MaquinaContract.MaquinaEntry.ID_MAQUINA, "a1");
-        values.put(MaquinaContract.MaquinaEntry.NOMBRE, " Excavadora");
-        values.put(MaquinaContract.MaquinaEntry.DESCRIP, "Modelo 2000");
-        values.put(MaquinaContract.MaquinaEntry.CLIENTE, "Carlos Santillan");
 
-        db.insert(MaquinaContract.MaquinaEntry.TABLE_NAME, null, values);
+
+        //MatDatabase.execSQL("");
+
+//        ContentValues values = new ContentValues();
+//        values.put(MaquinaContract.MaquinaEntry.ID_MAQUINA, "a1");
+//        values.put(MaquinaContract.MaquinaEntry.NOMBRE, " Excavadora");
+//        values.put(MaquinaContract.MaquinaEntry.DESCRIP, "Modelo 2000");
+//        values.put(MaquinaContract.MaquinaEntry.CLIENTE, "Carlos Santillan");
+//
+//        db.insert(MaquinaContract.MaquinaEntry.TABLE_NAME, null, values);
 
     }
 

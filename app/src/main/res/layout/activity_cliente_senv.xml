@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cliente_senv">
+
+    <ImageButton
+        android:id="@+id/img_senv_senv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cliente" />
+
+    <TextView
+        android:id="@+id/tv_senv_senv"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:text="DATOS DEL CLIENTE" />
+    <TextView
+        android:id="@+id/tv_nom_cli_senv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="200dp"
+        android:text="Nombre del cliente"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/ed_nom_cli_senv"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="240dp"
+        android:ems="10"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:hint="Ingrese el nombre del cliente"
+        android:background="@drawable/format_field"
+        android:inputType="text" />
+    <TextView
+        android:id="@+id/tv_tel_cli_senv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="300dp"
+        android:text="Numero telefonico del cliente"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/ed_tel_cli_senv"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="340dp"
+        android:ems="10"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:hint="Ingrese el numero telefonico del cliente"
+        android:background="@drawable/format_field"
+        android:inputType="phone"/>
+    <TextView
+        android:id="@+id/tv_dir_cli_senv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="400dp"
+        android:text="Direccion del cliente"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/ed_dir_cli_senv"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="440dp"
+        android:ems="10"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:hint="Ingrese la direccion del cliente"
+        android:background="@drawable/format_field"
+        android:inputType="text" />
+    <Button
+        android:id="@+id/bt_regresar_cli_senv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="650dp"
+        android:drawableLeft="@drawable/ic_baseline_arrow_circle_left_24"
+        android:text="REGRESAR"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:backgroundTint="@color/black" />
+
+    <Button
+        android:id="@+id/gen_not_senv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="650dp"
+        android:layout_marginStart="240dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/yellow"
+        android:text="GENERAR NOTA" />
+
+
+
+
+</RelativeLayout>

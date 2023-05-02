@@ -4,29 +4,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".RegistrarMaterial">
-    <ImageView
-        android:id="@+id/img_reg"
+    tools:context=".Costo_con_envio">
+    <ImageButton
+        android:id="@+id/img_cenv_cenv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/reg_mat" />
+        android:src="@drawable/cos_cenv" />
 
     <TextView
-        android:id="@+id/tv_mat_reg"
+        android:id="@+id/tv_cenv_cenv"
         android:layout_width="400dp"
         android:layout_height="50dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
         android:textColor="@android:color/white"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:gravity="center"
-        android:text="REGISTRO  MATERIALES" />
+        android:text="COSTO CON ENVIO" />
 
     <TextView
-        android:id="@+id/tv_nom_mat_reg"
+        android:id="@+id/tv_nom_mat_cenv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -36,7 +35,7 @@
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/ed_nom_mat_reg"
+        android:id="@+id/ed_nom_mat_cenv"
         android:layout_width="370dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
@@ -46,89 +45,87 @@
         android:gravity="center"
         android:hint="Ingrese el nombre del material"
         android:background="@drawable/format_field"
-        android:inputType="number" />
+        android:inputType="text" />
+
     <TextView
-        android:id="@+id/tv_cos_mat_reg"
+        android:id="@+id/tv_cos_mat_cenv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="320dp"
+        android:text="Costo del material"
         android:textColor="@color/black"
-        android:textSize="20dp"
-        android:text="Costo del material"/>
+        android:textSize="20dp" />
+
     <EditText
-        android:id="@+id/ed_cos_mat_reg"
+        android:id="@+id/ed_cos_mat_cenv"
         android:layout_width="370dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="370dp"
+        android:background="@drawable/format_field"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Ingrese el costo del material por metro cubico"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tv_cant_mat_cenv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="440dp"
+        android:text="Cantidad de material"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/ed_cant_mat_cenv"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="490dp"
         android:ems="10"
         android:textSize="18dp"
         android:gravity="center"
-        android:hint="Ingrese el nombre del material"
+        android:hint="Ingrese la cantidad en metros cubicos"
         android:background="@drawable/format_field"
         android:inputType="number"
-        android:maxLength="6"/>
+        android:maxLength="12"/>
+    <TextView
+        android:id="@+id/tv_costo_mat_cenv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="560dp"
+        android:text="Costo del material: "
+        android:textColor="@color/black"
+        android:textSize="20dp" />
 
-
-
     <Button
-        android:id="@+id/bt_registrar_mat_reg"
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="450dp"
-        android:backgroundTint="@color/yellow"
-        android:text="REGISTRAR"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        app:cornerRadius="20dp" />
-    <Button
-        android:id="@+id/bt_mostrar_mat_reg"
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="500dp"
-        android:backgroundTint="@color/yellow"
-        android:text="MOSTRAR"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        app:cornerRadius="20dp" />
-    <Button
-        android:id="@+id/bt_modificar_mat_reg"
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="550dp"
-        android:gravity="center"
-        android:backgroundTint="@color/yellow"
-        android:text="MODIFICAR"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        app:cornerRadius="20dp" />
-    <Button
-        android:id="@+id/bt_eliminar_mat_reg"
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="600dp"
-        android:backgroundTint="@color/yellow"
-        android:text="ELIMINAR"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        app:cornerRadius="20dp" />
-    <Button
-        android:id="@+id/bt_regresar_mat_reg"
+        android:id="@+id/bt_regresar_cenv"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="670dp"
+        android:layout_marginTop="650dp"
         android:drawableLeft="@drawable/ic_baseline_arrow_circle_left_24"
         android:text="REGRESAR"
         android:textColor="@color/white"
         android:textSize="15dp"
         android:backgroundTint="@color/black" />
+
+    <Button
+        android:id="@+id/bt_envio_cenv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="650dp"
+        android:layout_marginStart="240dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/yellow"
+        android:text="DETALLES ENVIO" />
+
 
 
 
